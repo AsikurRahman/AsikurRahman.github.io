@@ -17,9 +17,8 @@
           <p>
           </p>
           <p>
-          Instructions: Create a schematic for at least 3 LEDs connected to your Arduino,
-          which you will implement as a circuit on your breadboard. You will write
-          firmware (in a .ino file) for the circuit that makes the LEDs blink in a pattern.
+          Instructions: Create a schematic, circuit, and code that uses LEDs, a button, a for-loop,
+          digitalWrite(), digitalRead(), and analogWrite().
 
 
           </p>
@@ -27,7 +26,7 @@
           Circuit Demo:
 
           </p>
-          <img src ="a1gif.gif" width ="500">
+          <img src ="a2gif.gif" width ="500">
 
           </p>
           This is a gif showing the circuit operations when assembled
@@ -36,10 +35,16 @@
 
 
           </p>
-          <img src ="a1circuit.jpg" width ="500">
+          <img src ="a2circuit.jpg" width ="500">
 
           </p>
           This is an image showing how my circuit was assembeled
+
+          This is a parallel circuit with 2 ciruits. I have one connected to the pushbutton, and the other circuit is connected to the led.
+          When the pushbutton is pressed, current will pass through an input pin and will send a "HIGH" signal to a program to create the fade interaction.
+          When the pushbutton is not pressed, the input pin will send a signal "LOW" to a program to stop the fade
+
+
 
           </p>
 
@@ -48,11 +53,24 @@
 
           </p>
 
-          <img src ="a1schematic.jpg" width ="500">
+          <img src ="a2schematic.jpg" width ="500">
 
           </p>
 
-          This is a schematic going into more details about the different parts within the circuit. I went ahead and created 3 different circuits where each had their own set of resistors and LED. I created multiple circuits in order to prevent any overload issues with the LED or resistor.
+          This is a schematic of the circuit. I used analog pins to send brightness values to the LED when the pushbutton is pressed.
+
+          </p>
+
+          Calculations:
+
+          </p>
+
+          <img src ="a2math.jpg" width ="500">
+
+          </p>
+
+          These are my calculations for how I chose my values for which resistors to use.
+          I chose 220 resistor for the red led because that was the closest to 125 ohms. 
 
           </p>
 
@@ -60,12 +78,15 @@
 
           </p>
 
-          <img src ="a1codesnippet.png" width ="500">
+          <img src ="a2codesnippet.png" width ="500">
 
 
           </p>
 
-          This code allows each of the led lights to be individually programmable, and therefore each LED light can blink independently.
+          This code uses digitalWrite() to help read HIGH or LOW voltage signals and
+          would turn the LED on or off when pushing the button. analogWrite() was used
+          to have the LED fade from 0 brightness to full brightness and go backwards
+          in brightness in a loop until button is unpressed.
 
           </p>
 
