@@ -17,8 +17,8 @@
           <p>
           </p>
           <p>
-          Instructions: Create a schematic, circuit, and code that uses LEDs, a button, a for-loop,
-          digitalWrite(), digitalRead(), and analogWrite().
+          Instructions: You will create a schematic, circuit, and code that uses a sensor
+          (e.g. either the photoresistor or the thermistor) in a voltage divider to change the state of an LED.
 
 
           </p>
@@ -26,26 +26,26 @@
           Circuit Demo:
 
           </p>
-          <img src ="a2gif.gif" width ="500">
+          <img src ="a3circuit.gif" width ="500">
 
           </p>
           This is a gif showing the circuit operations when assembled
           </p>
 
+        </p>
+        <img src ="a3serial.gif" width ="500">
+
+        </p>
+
           Circuit Diagram:
 
 
           </p>
-          <img src ="a2circuit.jpg" width ="500">
+          <img src ="a3circuit.jpg" width ="500">
 
           </p>
 
           </p>
-          This is an image showing how my circuit was assembeled
-
-          This is a parallel circuit with 2 ciruits. I have one connected to the pushbutton, and the other circuit is connected to the led.
-          When the pushbutton is pressed, current will pass through an input pin and will send a "HIGH" signal to a program to create the fade interaction.
-          When the pushbutton is not pressed, the input pin will send a signal "LOW" to a program to stop the fade
 
 
 
@@ -56,24 +56,26 @@
 
           </p>
 
-          <img src ="a2schematic.jpg" width ="500">
+          <img src ="a3schematic.jpg" width ="500">
 
           </p>
 
-          This is a schematic of the circuit. I used analog pins to send brightness values to the LED when the pushbutton is pressed.
+          This is a schematic of my circuit.
 
           </p>
 
           Calculations:
 
+          I used Ohm's law to figure out the correct resistor for the red LED.
+          V = IR --> R=V/I ---> R =~107Ohms
+          I chose 220 Ohm resistor since that is the closest to 106. For the photoresistor
+          I chose 10k.
+
           </p>
 
-          <img src ="a2math.jpg" width ="500">
+          <img src ="a3math.jpg" width ="500">
 
           </p>
-
-          These are my calculations for how I chose my values for which resistors to use.
-          I chose 220 resistor for the red led because that was the closest to 125 ohms.
 
           </p>
 
@@ -81,15 +83,22 @@
 
           </p>
 
-          <img src ="a2codesnippet.png" width ="500">
+          <img src ="a3snippetpart1.png" width ="500">
 
 
           </p>
 
-          This code uses digitalWrite() to help read HIGH or LOW voltage signals and
-          would turn the LED on or off when pushing the button. analogWrite() was used
-          to have the LED fade from 0 brightness to full brightness and go backwards
-          in brightness in a loop until button is unpressed.
+          </p>
+
+          <img src ="a3snippetpart2.png" width ="500">
+
+
+          </p>
+
+          I used analogRead() to get the photoresistors values. I used analogWrite() to
+          initialize the led brightness. The map function was used to convert the photoresistors
+          values to the LED brightness values from 0-255. I also used if statements to
+          print to the serial monitor. 
 
           </p>
 
