@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Example Student's HCDE 439 Physical Computing Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+
+      <div class="header">
+          <h1>Assignment 4: Highervoltage!</h1>
+          <p>
+          </p>
+          <p>
+          Instructions: You will create a schematic, circuit, and code that uses a sensor
+          (e.g. either the photoresistor or the thermistor) in a voltage divider to change the state of an LED.
+
+
+          </p>
+
+          Circuit Demo:
+
+          </p>
+          <img src ="a3circuit.gif" width ="500">
+
+          </p>
+          This is a gif showing the circuit operations when assembled
+          </p>
+
+        </p>
+        <img src ="a3serial.gif" width ="500">
+
+        </p>
+
+          Circuit Diagram:
+
+
+          </p>
+          <img src ="a3circuit.jpg" width ="500">
+
+          </p>
+
+          </p>
+
+
+
+          </p>
+
+
+          Schematic:
+
+          </p>
+
+          <img src ="a3schematic.jpg" width ="500">
+
+          </p>
+
+          This is a schematic of my circuit.
+
+          </p>
+
+          Calculations:
+
+          I used Ohm's law to figure out the correct resistor for the red LED.
+          V = IR --> R=V/I ---> R =~107Ohms
+          I chose 220 Ohm resistor since that is the closest to 106. For the photoresistor
+          I chose 10k.
+
+          </p>
+
+          <img src ="a3math.jpg" width ="500">
+
+          </p>
+
+          </p>
+
+          Code Snippet:
+
+          </p>
+
+          <img src ="a3snippetpart1.png" width ="500">
+
+
+          </p>
+
+          </p>
+
+          <img src ="a3snippetpart2.png" width ="500">
+
+
+          </p>
+
+          I used analogRead() to get the photoresistors values. I used analogWrite() to
+          initialize the led brightness. The map function was used to convert the photoresistors
+          values to the LED brightness values from 0-255. I also used if statements to
+          print to the serial monitor.
+
+          </p>
+
+
+    </body>
+</html>
