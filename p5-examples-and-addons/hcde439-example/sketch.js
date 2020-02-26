@@ -68,16 +68,12 @@ function graphData(newData) {
   }
 }
 
+
 function draw() {
-  background(0);
-  fill(255);
-
-  // this takes in the data and uses text function to output the data from sensor
-  text(datain,30,30)
-
-  // if (datain == 0) {
-  //     text("button pressed: NO", 30,30);
-  // } else {
-  //     text("button pressed: YES", 30,30);
-  // }
+  console.log(datain)
+  background(255,255,255);
+  if(datain > 0)
+  text(("2 sensors added together: " + datain), datain/5,30);
 }
+  // this takes in the data and uses text function to output the data from sensor
+  // text(datain,30,30)}
